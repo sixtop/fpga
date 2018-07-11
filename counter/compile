@@ -28,6 +28,6 @@ Simulate()
 
 #CleanLibraries
 #RTLCompile 
-Simulate tb_counter
+Simulate bin/tb_counter
 
 
