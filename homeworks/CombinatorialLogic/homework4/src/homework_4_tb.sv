@@ -1,17 +1,21 @@
 module testbench;
-    reg [7:0] b, n;
-    //wire [7:0] R;
+    reg [15:0] in;
+    reg [3:0] con;
+    reg dir;
+    wire [15:0] out;
     
     initial begin
-        b = 0;
-        n = 10;
+        in = 16'b1001_0011_1101_0001;
+        con = 0;
+        dir = 0;
     end
 
-    always begin        
+    always begin
         #10
-        b = b + 1'b1;
+        con = con + 1'b1;
+        dir = ~dir;
     end
     
-    mod hw2( , b, n);
+    barrel_shifter hw4(out, in, con, dir);
 
 endmodule 

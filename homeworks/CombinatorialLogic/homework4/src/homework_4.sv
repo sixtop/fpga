@@ -1,15 +1,16 @@
 
-module mod (R, b, n);
-    output [7:0] R;
-    input [7:0] b, n;   
+module barrel_shifter (out, in, con, dir);
+    output [15:0] out;
+    input [15:0] in;
+    input [3:0] con;
+    input dir;
     
-    reg [7:0] R;
+    reg [15:0] out;
 
-    always @(b, n) begin
-        if (b == 0 || n == 0 || b >= 2*n) // invalid input
-            R = 7'bx;
-        
-        else if (n > b) R = b;
-        else if (n <= b) R = b - n;
+    always @(in, con, dir) begin
+        if (dir)
+            out = in >> con;
+        else 
+            out = in << con;
     end
 endmodule
