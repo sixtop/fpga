@@ -3,10 +3,10 @@ module mux4to1_tb;
     logic tb_clk;
     logic tb_reset_b;
 
-    logic [3:0] state;
+    //logic [3:0] state;
 
     logic nickel, dime, quarter;
-    logic DispatchCan, DispatchDime, DispatchNickel;
+    //logic DispatchCan, DispatchDime, DispatchNickel;
 
     //clock setup
     initial begin
@@ -51,8 +51,8 @@ module mux4to1_tb;
     end
 
     mooreVender vender(nickel, dime, quarter,
-        DispatchCan, DispatchNickel, DispatchDime,
-        tb_clk, tb_reset_b, state);
+        , , ,
+        tb_clk, tb_reset_b, );
 
 
 endmodule

@@ -2,16 +2,16 @@
 **/bin/
 
 #Simulation
-*/csrc/
-*/DVEfiles/
-*/inter.vpd
-*/ucli.key
+**/csrc/
+**/DVEfiles/
+**/inter.vpd
+**/ucli.key
 */simulation/
 
 #Eclipse artifacts
-*/.dvt/
-*/dvt_build.log
-*/.project
+**/.dvt/
+**/dvt_build.log
+**/.project
 
 #Quartus
 */qdb/
