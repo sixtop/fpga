@@ -51,11 +51,13 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to heartbit
 # SMA_CLK output to deliver 1.8v
 #set_location_assignment PIN_E24 -to fsync
 
-set_global_assignment -name SOURCE_FILE counter.qsf
-set_global_assignment -name SYSTEMVERILOG_FILE ./counter.sv
 set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 SP0.06 Pro Edition"
-set_global_assignment -name SYSTEMVERILOG_FILE counter_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE counter.sv
-set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name SOURCE_FILE /nfs/site/disks/gm_mil_chw_disk01/vhpalaci/repos/counter/counter.qsf
+set_global_assignment -name SYSTEMVERILOG_FILE /nfs/site/disks/gm_mil_chw_disk01/vhpalaci/repos/counter/src/counter_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE /nfs/site/disks/gm_mil_chw_disk01/vhpalaci/repos/counter/src/counter.sv
+set_global_assignment -name POWER_AUTO_COMPUTE_TJ ON
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
