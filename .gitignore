@@ -16,3 +16,6 @@
 #Quartus
 */qdb/
 */output_files/
+
+#Etc
+**/*.old
