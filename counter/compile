@@ -1,0 +1,33 @@
+#!/bin/bash
+SIM=./sim
+RTL=./rtl/ip
+ALTERA=./sim_lib
+
+
+CleanLibraries()
+{
+# rm cam_subsys_tb.daidir/ -rf
+ rm csrc/ -rf
+ rm inter.vpd -rf
+ rm Makefile* -rf
+ rm DVEfiles/ -rf
+ rm libraries/ -rf
+ rm cam_subsys_tb.daidir/ -rf
+}
+
+RTLCompile()
+{
+  vlogan -f $SIM/mh_csi2rx_top.lst +v2k -sverilog -timescale=1ps/1ps
+  vlogan +v2k -sverilog ./tb/seq_tb.sv -timescale=1ps/1ps 
+}
+
+Simulate()
+{
+  vcs counter.sv counter_tb.sv -lca -t ps -sverilog -debug_all -timescale=1ns/100ps +lint=PCWM -o ${1}
+}
+
+#CleanLibraries
+#RTLCompile 
+Simulate tb_counter
+
+
