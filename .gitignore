@@ -6,7 +6,7 @@
 **/DVEfiles/
 **/inter.vpd
 **/ucli.key
-*/simulation/
+**/simulation/
 
 #Eclipse artifacts
 **/.dvt/
@@ -14,8 +14,8 @@
 **/.project
 
 #Quartus
-*/qdb/
-*/output_files/
+**/qdb/
+**/output_files/
 
 #Etc
 **/*.old
