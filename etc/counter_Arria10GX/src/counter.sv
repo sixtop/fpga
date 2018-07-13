@@ -2,13 +2,13 @@
 module counter ( 
   input   logic clk,
   input  logic reset_b,
-  output  logic heartbit
+  output  logic [15:0] leds
 );
 
 parameter BW = 24;
 logic [BW-1:0] counter_flops;
 
-always_comb heartbit = counter_flops[BW-1];
+always_comb leds = counter_flops[BW-1:8];
 
 always_ff @ (posedge clk or negedge reset_b) begin
    if (~reset_b) 

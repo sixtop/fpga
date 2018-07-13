@@ -14,7 +14,7 @@ initial begin
    #(100);
    //Deassert reset_b
    tb_reset_b = 1'b1;
-   #(1ms);
+   #(100ms);
     
    tb_reset_b = 1'b0;
 end
@@ -22,7 +22,7 @@ end
 counter uut( 
   .clk      (tb_clk),
   .reset_b  (tb_reset_b),
-  .heartbit ( )
+  .leds ( )
 );
 
 endmodule 
