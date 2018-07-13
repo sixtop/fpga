@@ -16,6 +16,7 @@
 #Quartus
 **/qdb/
 **/output_files/
+**/tmp-clearbox/
 
 #Etc
 **/*.old
