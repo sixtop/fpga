@@ -1,0 +1,2 @@
+#exec curl --proxy proxy-chain.intel.com:911 -d 'token=ac55frhyz9xepsqjxhzgb18pukuzpa&user=ueuEdefnZt49wuiQhZkb6CrkrsCctb&title=Quartus&message=Quartus Compilation success!' http://api.pushover.net/1/messages.json
+exec ssh localhost curl "-s --proxy proxy-chain.intel.com:911 -d 'token=ac55frhyz9xepsqjxhzgb18pukuzpa&user=ueuEdefnZt49wuiQhZkb6CrkrsCctb&title=Quartus&message=Quartus Compilation next!' http://api.pushover.net/1/messages.json"
